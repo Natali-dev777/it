@@ -1,0 +1,283 @@
+body,
+html {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* фиксированное меню */
+.navbar {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    height: 58px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding: 0 15px;
+    font-family: cursive;
+    font-size: 30px;
+    position: relative;
+    width: 200px;
+}
+
+.navbar-brand .w-logo-p2 {
+    position: absolute;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+.navbar-brand .w-logo-p1 {
+    color: cornsilk;
+}
+
+.navbar-item {
+    background-color: #333;
+    font-size: 24px;
+    color: #f2f2f2;
+    padding: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navbar button {
+    border: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+/* фиксированное меню конец*/
+
+#main {
+    margin-top: 58px;
+    margin-right: 200px;
+    background: #E0E0E0;
+    display: flex;
+    min-height: calc(100vh - 58px - 46px);
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
+    background: grey;
+    font-size: 14px;
+    position: relative;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background: #424242;
+    color: #E0E0E0;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: lightblue;
+    font-family: arial;
+    padding: 8px 0;
+    display: block;
+}
+
+#main article {
+    flex: 1;
+    padding: 15px;
+}
+
+.container {
+    max-width: 1300px;
+}
+
+.page-title {
+    background: #f5f6f8;
+    border-bottom: 1px solid #e4e7ea;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+/* Выпадающий список начало */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    background: #333333;
+    position: absolute;
+    min-width: 170px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.dropbtn {
+    background-color: #333;
+    font-size: 24px;
+    color: #f2f2f2;
+    padding: 15px;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Выпадающий список конец */
+h1 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid grey;
+}
+
+table.spec {
+    width: auto;
+    font-size: .9rem;
+    margin: 0;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+table.spec th {
+    text-align: left;
+}
+
+table td,
+table th {
+    padding: .5rem;
+}
+
+.value {
+    color: #31a354;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+pre {
+    background: #f8f7f7;
+    color: #333;
+    border: 1px solid #e9e8e8;
+    border-radius: 3px;
+    word-wrap: break-word;
+    padding: 6px 10px;
+    line-height: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: .94rem;
+    overflow: auto;
+    font-family: "Courier New", Courier, monospace;
+}
+
+pre code {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: .5rem;
+}
+
+.attribute {
+    color: #e6550d;
+}
+
+.sidenav {
+    width: 200px;
+    position: fixed;
+    top: 58px;
+    right: 0;
+    height: 100%;
+    background: #424242;
+}
+
+.sidenav a {
+    display: block;
+    color: #bbbaba;
+    font-size: 22px;
+    padding: 6px 10px 6px 15px;
+    text-decoration: none;
+}
+
+.sidenav a:hover {
+    color: #e6550d;
+}
+
+.fig {
+    text-align: center;
+}
+
+.fig .figsign {
+    font-style: italic;
+    padding-bottom: 15px;
+}
+
+/* Форма ------*/
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.container-form {
+    width: 600px;
+    display: flex;
+    margin: 25px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #e5e5e5;
+}
+
+input[type=button] {
+    background-color: #5f9ea0;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    margin: 6px auto;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #477577;
+}
+
+/* ------Форма */

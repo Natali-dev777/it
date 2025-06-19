@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Справочник Css</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a href="/" class="w-logo">
+				<span class="w-logo-p1">Html</span>
+				<span class="w-logo-p2">Css</span>
+			</a>
+		</div>
+		<!-- Выпадающий список начало -->
+		<div class="dropdown">
+			<button class="navbar-item">HTML</button>
+			<div class="dropdown-content">
+				<a href="html-atributy.html">Атрибуты</a>
+				<a href="html-znacheniya.html">Значения</a>
+				<a href="html-tipy.html">Типы элементов</a>
+			</div>
+		</div>
+		<!-- Выпадающий список конец -->
+		<!-- Выпадающий список начало -->
+		<div class="dropdown">
+			<button class="navbar-item">CSS</button>
+			<div class="dropdown-content">
+				<a href="css-spravochnik.html">Справочник CSS</a>
+				<a href="css-znacheniya.html">Значения свойств</a>
+				<a href="css-funkciy.html">Функции</a>
+				<a href="css-edinicy.html">Единицы CSS</a>
+				<a href="css-tipy.html">Типы элементов</a>
+			</div>
+		</div>
+		<!-- Выпадающий список конец -->
+		<!-- Выпадающий список начало -->
+		<div class="dropdown">
+			<button class="navbar-item">Горячие клавиши</button>
+			<div class="dropdown-content">
+				<a href="hotkeys-windows.html">Windows</a>
+				<a href="hotkeys-vscode.html">VS Code</a>
+			</div>
+		</div>
+		<!-- Выпадающий список конец -->
+		<a href="settings-vscode.html" class="navbar-item">Настройки VS Code</a>
+		<a href="feedback.html" class="navbar-item">Обратная связь</a>
+
+	</nav>
+	<div id="main">
+		<nav class="sidebar">
+			<h5>Полезные ссылки</h5>
+			<a href="https://webref.ru/" target="_blank">WebReference</a>
+			<a href="https://involta.ru/tools/validator-html/" target="_blank">Валидатор HTML</a>
+			<a href="https://validator.w3.org/#validate_by_input" target="_blank">validator.w3.org</a>
+			<a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
+			<a href="https://transliteration-online.ru" target="_blank">Транслитерация</a>
+			<a href="https://iconbird.com/" target="_blank">Иконки</a>
+			<a href="https://htmlweb.ru/html/symbols.php" target="_blank">Спецсимволы Html</a>
+		</nav>
+		<article>
+			<h1>Справочник CSS</h1>
+			<div id="position"></div>
+			<div class="page-title">
+				<h2>position</h2>
+			</div>
+			<p>Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на
+				веб-странице.
+			</p>
+			<h3>Краткая информация</h3>
+			<table class="spec">
+				<tbody>
+					<tr>
+						<th>Значение по умолчанию </th>
+						<td class="value">static</td>
+					</tr>
+					<tr>
+						<th>Наследуется</th>
+						<td>Нет</td>
+					</tr>
+					<tr>
+						<th>Применяется</th>
+						<td>Ко всем элементам</td>
+					</tr>
+					<tr>
+						<th>Анимируется</th>
+						<td>Нет</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Синтаксис</h3>
+			<pre><code>position: absolute | fixed | relative | static | sticky</code></pre>
+			<h3>Значения</h3>
+			<dl>
+				<dt>absolute</dt>
+				<dd> Абсолютное позиционирование. Указывает, что элемент абсолютно позиционирован, при этом другие
+					элементы
+					отображаются на веб-странице словно абсолютно позиционированного элемента и нет. Положение элемента
+					задаётся
+					свойствами <a href="/css/left">left</a>, <a href="https://webref.ru/css/top"
+						target="_blank">top</a>, <a href="https://webref.ru/css/right" target="_blank">right</a>
+					и <a href="https://webref.ru/css/bottom" target="_blank">bottom</a>, также на положение влияет
+					значение свойства <span class="attribute">position</span> родительского элемента. Так, если у
+					родителя значение <span class="attribute">position</span> установлено как <span
+						class="value">static</span> или родителя
+					нет, то
+					отсчёт координат ведётся от края окна браузера. Если у родителя значение <span
+						class="attribute">position</span>
+					задано как <span class="value">relative</span>, то отсчёт координат ведётся от края родительского
+					элемента.</dd>
+				<dt>fixed</dt>
+				<dd>Фиксированное позиционирование. По своему действию это значение близко к <span
+						class="value">absolute</span>, но
+					в отличие от него привязывается к указанной свойствами <span class="attribute">left</span>, <span
+						class="attribute">top</span>, <span class="attribute">right</span> и <span
+						class="attribute">bottom</span>
+					точке на экране и не меняет своего положения при прокрутке веб-страницы. </dd>
+				<dt>relative</dt>
+				<dd>Относительное позиционирование. Положение элемента устанавливается относительно его исходного места.
+					Добавление
+					свойств <span class="attribute">left</span>, <span class="attribute">top</span>,
+					<span class="attribute">right</span> и <span class="attribute">bottom</span> изменяет позицию
+					элемента и
+					сдвигает его в ту или иную сторону от первоначального расположения.
+				</dd>
+				<dt>static</dt>
+				<dd>Статичное позиционирование. Элементы отображаются как обычно. Использование свойств <span
+						class="attribute">left</span>, <span class="attribute">top</span>, <span
+						class="attribute">right</span> и
+					<span class="attribute">bottom</span> не приводит к каким-либо результатам.
+				</dd>
+				<dt>sticky</dt>
+				<dd>Это сочетание относительного и фиксированного позиционирования. Элемент рассматривается как
+					позиционированный
+					относительно, пока он не пересекает определённый порог, после чего рассматривается как
+					фиксированный. Обычно
+					применяется для фиксации заголовка на одном месте, пока содержимое, к которому относится заголовок,
+					прокручивается на странице.</dd>
+			</dl>
+			<div id="left"></div>
+			<div class="page-title">
+				<h2>left</h2>
+			</div>
+			<p>Для позиционированного элемента определяет расстояние от левого края родительского элемента, не включая
+				отступ, поле и ширину рамки, до левого края дочернего элемента. Отсчёт координат зависит от значения
+				свойства position.
+				Если оно равно absolute, в качестве родителя выступает окно браузера и положение элемента определяется
+				от его левого
+				края (рис. 1).
+			</p>
+			<div class="fig">
+				<img src="img/css_left_1.png" alt="Значение свойства left относительно окна браузера">
+				<p class="figsign">Рис. 1. Значение свойства left относительно окна браузера</p>
+			</div>
+
+			<p>В случае значения relative, left отсчитывается от левого края исходного положения элемента (рис. 2).</p>
+			<h3>Краткая информация</h3>
+			<table class="spec">
+				<tbody>
+					<tr>
+						<th>Значение по умолчанию </th>
+						<td class="value">auto</td>
+					</tr>
+					<tr>
+						<th>Наследуется</th>
+						<td>Нет</td>
+					</tr>
+					<tr>
+						<th>Применяется</th>
+						<td>Ко всем элементам</td>
+					</tr>
+					<tr>
+						<th>Анимируется</th>
+						<td>Да</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Синтаксис</h3>
+			<pre><code>left: <размер> | <проценты> | auto</code></pre>
+			<h3>Значения</h3>
+			<p>В качестве значений принимаются любые единицы длины, принятые в CSS — например, пиксели (px), дюймы (in),
+				пункты (pt)
+				и др. Значение свойства <span class="attribute">left</span> может быть и отрицательным, в этом случае
+				возможны наложения разных элементов друг на друга. При задании значения в процентах, положение элемента
+				вычисляется в зависимости от ширины родительского элемента.</p>
+			<dl>
+				<dt>auto</dt>
+				<dd>Не изменяет положение элемента.</dd>
+			</dl>
+
+
+		</article>
+	</div>
+	<div class="sidenav">
+		<a href="#position">position</a>
+		<a href="#left">left</a>
+	</div>
+	<footer>Сайт-конспект по Html и Css &#169; 2025г.</footer>
+</body>
+
+</html>
